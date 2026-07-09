@@ -75,3 +75,27 @@ python scripts/01_build_master_table.py
 conda env create -f environment.yml
 conda activate exercise1
 ```
+
+---
+
+## Accessing 1000 Genomes (open — no dbGaP)
+
+Dataset: 30x high-coverage, GRCh38, 3,202 samples (Byrska-Bishop 2022), hosted by IGSR/EBI.
+
+- **Call set base:** `http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/`
+- **Sample -> population panel:** `.../1000G_2504_high_coverage/20130606_g1k_3202_samples_ped_population.txt`
+
+Two access modes:
+1. **Stream small regions** (default, recommended for the pilot): `scripts/00_get_1000g.sh`
+   pulls only the windows in `refs/pilot_regions.tsv` via tabix remote access — MBs, not GBs.
+2. **Download whole chromosomes** (for later genome-wide work): see the `curl` hint the
+   script prints at the end.
+
+Run:
+```
+conda activate exercise1
+./scripts/00_get_1000g.sh          # uses refs/pilot_regions.tsv (APOE seeded as example)
+```
+
+Note: for allele-*frequency* work you may restrict to the 2,504 unrelated samples (exclude
+trio children) using the panel file, so relatedness doesn't inflate counts.
