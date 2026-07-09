@@ -1,0 +1,19 @@
+# Reproducible environment for Exercise 1.
+# Create with:  conda env create -f environment.yml
+name: exercise1
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - bcftools
+  - plink2
+  - scikit-allel
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - r-base
+  - r-ldlinkr

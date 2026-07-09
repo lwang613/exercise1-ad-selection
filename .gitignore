@@ -1,0 +1,32 @@
+# --- Large data: tracked by documentation, not git ---
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Common genomics data files (in case they land elsewhere)
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.bcf
+*.bam
+*.cram
+*.fasta
+*.fa
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# --- Python ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# --- Environments ---
+.env
+env/
+venv/
+.conda/
