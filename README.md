@@ -1,10 +1,6 @@
 # Exercise 1 — Evolutionary Annotation of AD/ADRD Risk Loci
 
-**Question.** Test — systematically and defensibly — whether Alzheimer's disease
-risk loci (the ~91 AD/ADRD loci from the Bellenguez 2026 consensus meta-analysis)
-overlap genomic regions shaped by natural selection acting on *linked or pleiotropic
-earlier-life traits* (immunity, lipid metabolism, vascular biology). **Not** whether
-Alzheimer's itself was selected for.
+**Question.** Test — systematically and defensibly — whether Alzheimer's disease risk loci (the ~91 AD/ADRD loci from the Bellenguez 2026 consensus meta-analysis) overlap genomic regions shaped by natural selection acting on *linked or pleiotropic earlier-life traits* (immunity, lipid metabolism, vascular biology). **Not** whether Alzheimer's itself was selected for.
 
 **Status:** Setup (week 1). _Last updated: 2026-07-09._
 
@@ -23,8 +19,7 @@ Alzheimer's itself was selected for.
 | `refs/`          | Paper PDFs; the stat -> footprint -> timescale reference table.      |
 | `plans/`         | Roadmap, PI-meeting notes, timelines.                                 |
 
-> `data/` is **not** tracked by git (too large). Git tracks the recipe — code,
-> notes, small tables — not the ingredients. Document where raw data came from below.
+> `data/` is **not** tracked by git (too large). Git tracks the recipe — code, notes, small tables — not the ingredients. Document where raw data came from below.
 
 ---
 
@@ -40,8 +35,7 @@ Alzheimer's itself was selected for.
 
 ## How to run the pipeline
 
-_Fill in as scripts are written — the goal is that this section lets anyone
-reproduce every result from raw data._
+_Fill in as scripts are written — the goal is that this section lets anyone reproduce every result from raw data._
 
 ```
 # 1. Build & harmonize the master locus table
@@ -86,10 +80,8 @@ Dataset: 30x high-coverage, GRCh38, 3,202 samples (Byrska-Bishop 2022), hosted b
 - **Sample -> population panel:** `.../1000G_2504_high_coverage/20130606_g1k_3202_samples_ped_population.txt`
 
 Two access modes:
-1. **Stream small regions** (default, recommended for the pilot): `scripts/00_get_1000g.sh`
-   pulls only the windows in `refs/pilot_regions.tsv` via tabix remote access — MBs, not GBs.
-2. **Download whole chromosomes** (for later genome-wide work): see the `curl` hint the
-   script prints at the end.
+1. **Stream small regions** (default, recommended for the pilot): `scripts/00_get_1000g.sh` pulls only the windows in `refs/pilot_regions.tsv` via tabix remote access — MBs, not GBs.
+2. **Download whole chromosomes** (for later genome-wide work): see the `curl` hint the script prints at the end.
 
 Run:
 ```
@@ -97,5 +89,4 @@ conda activate exercise1
 ./scripts/00_get_1000g.sh          # uses refs/pilot_regions.tsv (APOE seeded as example)
 ```
 
-Note: for allele-*frequency* work you may restrict to the 2,504 unrelated samples (exclude
-trio children) using the panel file, so relatedness doesn't inflate counts.
+Note: for allele-*frequency* work you may restrict to the 2,504 unrelated samples (exclude trio children) using the panel file, so relatedness doesn't inflate counts.

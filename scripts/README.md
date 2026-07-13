@@ -1,7 +1,6 @@
 # scripts/
 
-All analysis code lives here. Naming convention: number scripts in run order so the
-pipeline is self-documenting.
+All analysis code lives here. Naming convention: number scripts in run order so the pipeline is self-documenting.
 
 ```
 01_build_master_table.py     # extract + harmonize the 91 loci
@@ -11,5 +10,4 @@ pipeline is self-documenting.
 05_matched_null.py           # matched-background enrichment
 ```
 
-Each script reads from `data/` and writes to `data/processed/` or `results/`.
-Nothing here should require manual editing of inputs — raw data stays immutable.
+Each script reads from `data/` and writes to `data/processed/` or `results/`. Nothing here should require manual editing of inputs — raw data stays immutable.
