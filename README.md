@@ -27,9 +27,9 @@
 
 | Dataset | Version / access | Where | Notes |
 |---------|------------------|-------|-------|
-| Bellenguez 2026 AD/ADRD loci | Supplementary tables | `data/raw/` | Authoritative locus list. |
-| 1000 Genomes | High-coverage (Byrska-Bishop 2022), GRCh38 | `data/raw/` | Training dataset for AF/LD/selection. |
-| _(add as acquired)_ | | | |
+| Bellenguez 2026 AD/ADRD loci | Nat Genet 2026;58:1214–1225, Suppl. Tables (MOESM4). DOI 10.1038/s41588-026-02583-1 | `data/raw/Bellenguez2026_supplementary_tables_MOESM4.xlsx` | Authoritative locus list. **Table S2** = 91 Tier 1 + 18 Tier 2 lead variants (GRCh38, `chr:pos:REF:ALT`). Extracted to `data/processed/bellenguez2026_lead_variants_TableS2.csv` by `scripts/01_extract_locus_table.py`. |
+| 1000 Genomes | High-coverage (Byrska-Bishop 2022), GRCh38 | `data/raw/1000g/` | Training dataset for AF/LD/selection. |
+| Summary statistics (optional, later) | GWAS Catalog GCST90704646 (main), GCST90704647 (no-proxy), GCST90704648 (no-biobank) | not downloaded | Genome-wide per-variant stats; NIAGADS mirror. |
 
 ---
 
